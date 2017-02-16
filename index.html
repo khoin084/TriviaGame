@@ -1,0 +1,87 @@
+<!--
+*Developer:Khoi Nguyen
+*Date: 2/14/2017
+*UCSD Code Bootcamp: Homework #5
+-->
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <!--Linking viewport, regular zoom 100% across various devices.-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Trivia Game </title>
+  <!--Linking bootstrap css to leverage classes for RWD-->
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <!--Link after boostrap so that it does not overwrite my styles.-->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- Added link to the jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <!--Linking javascript-->
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
+  
+</head>
+<!--need to onload the entire page before performing any JS, i.e. wait for page to fully load.-->
+<body>
+  <div class="jumbotron text-center" id="main-banner"> 
+    Totally Super Hero Trivia!!!
+  </div>
+  <div class="container-fluid">
+    <div clas="row">
+      <div class="col-sm-12 text-center">
+        <button class="btn btn-primary btn-lg" id="startBtn">
+          START
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div clas="row">
+      <div class="col-sm-12 text-center">
+        <h1 id="timer">Time remaining: 
+          <span id="count-down"> </span>
+          <span> Seconds </span>
+        </h1>
+        <h1 id="out-of-time">Out of Time!
+        </h1>
+        <div id="placeHolder"> </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div clas="row">
+      <div class="col-sm-12 text-center">
+        <h1 id="question">
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div clas="row">
+      <div class="col-sm-12 text-center">
+        <button class="btn btn-warning btn-lg text-center choiceBtn" id="firstChoice" value="btnA"></button>
+      </div>
+      <div class="col-sm-12 text-center">
+        <button class="btn btn-warning btn-lg text-center choiceBtn" id="secondChoice" value="btnB"></button>
+      </div>
+      <div class="col-sm-12 text-center">
+        <button class="btn btn-warning btn-lg text-center choiceBtn" id="thirdChoice" value="btnC"></button>
+      </div>
+      <div class="col-sm-12 text-center">
+        <button class="btn btn-warning btn-lg text-center choiceBtn" id="fourthChoice" value="btnD"></button>
+      </div>
+    </div>
+  </div>
+  <div id="result"> </div>
+  <div class="container-fluid">
+    <div clas="row">
+      <div class="col-sm-12 text-center">
+        <h1 id="pointsCorrect"> Correct: <span id="right"></span> </h1>
+        <h1 id="pointsWrong"> Wrong: <span id="wrong"></span> </h1>
+        <button class="btn btn-primary btn-lg text-center choiceBtn" id="startOverBtn"> Start Over ?</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
